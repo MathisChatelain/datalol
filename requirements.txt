@@ -6,3 +6,4 @@ jupyter
 scikit-learn
 requests
 ipykernel
+altair[all]
