@@ -11,3 +11,9 @@ This is the raw logbook of the project, where I will document my daily progress,
     - I had to setup jupyter's kernel correctly in order to make inline code work.
     - I started collecting data, more precisely I am currently fetching the player ids of every ranked active player from diamond 1 to bronze 4.
     - I did some tinkering and many different changes to the ranked player collection script, my goal for the day is now to make a first vizualisation of the player repartition by rank, I am currently looking at vizualisation libraries in Python.
+
+## Day two ( 11/04/2025 )
+
+    - I worked on vizualisation of data today I can know show a first version of the player distribution accross ranks
+    - Figuring out how to color the bars was surprisingly hard but I had some interesting findings about scales while doing so
+    - One of my next goals will be to interact with the graphs by being able to change the number of games in the query live.

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-ec9820bea19effb7f87e1431cb3a1bb9"}, "mark": {"type": "bar", "cornerRadiusTopLeft": 10, "cornerRadiusTopRight": 10}, "encoding": {"color": {"field": "tier_rank", "legend": null, "scale": {"domain": ["BRONZE IV", "BRONZE III", "BRONZE II", "BRONZE I", "SILVER IV", "SILVER III", "SILVER II", "SILVER I", "GOLD IV", "GOLD III", "GOLD II", "GOLD I", "PLATINUM IV", "PLATINUM III", "PLATINUM II", "PLATINUM I", "EMERALD IV", "EMERALD III", "EMERALD II", "EMERALD I", "DIAMOND IV", "DIAMOND III", "DIAMOND II", "DIAMOND I"], "range": ["#cd7f32", "#cd7f32", "#cd7f32", "#cd7f32", "#c0c0c0", "#c0c0c0", "#c0c0c0", "#c0c0c0", "#ffd700", "#ffd700", "#ffd700", "#ffd700", "#e5e4e2", "#e5e4e2", "#e5e4e2", "#e5e4e2", "#50C878", "#50C878", "#50C878", "#50C878", "#b9fbc0", "#b9fbc0", "#b9fbc0", "#b9fbc0"]}, "type": "nominal"}, "tooltip": [{"field": "tier_rank", "type": "nominal"}, {"field": "count", "type": "quantitative"}], "x": {"field": "tier_rank", "sort": ["BRONZE IV", "BRONZE III", "BRONZE II", "BRONZE I", "SILVER IV", "SILVER III", "SILVER II", "SILVER I", "GOLD IV", "GOLD III", "GOLD II", "GOLD I", "PLATINUM IV", "PLATINUM III", "PLATINUM II", "PLATINUM I", "EMERALD IV", "EMERALD III", "EMERALD II", "EMERALD I", "DIAMOND IV", "DIAMOND III", "DIAMOND II", "DIAMOND I"], "type": "nominal"}, "y": {"field": "count", "type": "quantitative"}}, "height": 400, "title": "Player Count by Rank", "width": 1000, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-ec9820bea19effb7f87e1431cb3a1bb9": [{"tier_rank": "BRONZE IV", "count": 22768}, {"tier_rank": "BRONZE III", "count": 14132}, {"tier_rank": "BRONZE II", "count": 12480}, {"tier_rank": "BRONZE I", "count": 6270}, {"tier_rank": "SILVER IV", "count": 24440}, {"tier_rank": "SILVER III", "count": 13721}, {"tier_rank": "SILVER II", "count": 10534}, {"tier_rank": "SILVER I", "count": 5658}, {"tier_rank": "GOLD IV", "count": 28249}, {"tier_rank": "GOLD III", "count": 12599}, {"tier_rank": "GOLD II", "count": 8047}, {"tier_rank": "GOLD I", "count": 1477}, {"tier_rank": "PLATINUM IV", "count": 23709}, {"tier_rank": "PLATINUM III", "count": 13577}, {"tier_rank": "PLATINUM II", "count": 11065}, {"tier_rank": "PLATINUM I", "count": 11566}, {"tier_rank": "EMERALD IV", "count": 31706}, {"tier_rank": "EMERALD III", "count": 16137}, {"tier_rank": "EMERALD II", "count": 11881}, {"tier_rank": "EMERALD I", "count": 10216}, {"tier_rank": "DIAMOND IV", "count": 14238}, {"tier_rank": "DIAMOND III", "count": 6712}, {"tier_rank": "DIAMOND II", "count": 6595}, {"tier_rank": "DIAMOND I", "count": 6584}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
